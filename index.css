@@ -1,0 +1,173 @@
+html {
+    width: 100vw;
+    height: 100vh;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#57606f, #2f3542);
+    color: #fff;
+}
+
+.container {
+    width: 400px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    background: rgba(0,0,0,.7);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container h2 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.container .input-wrapper {
+    margin: 30px 0;
+    padding: 0px;
+    position: relative;
+}
+
+.container .input-wrapper input {
+    width: 100%;
+    background: transparent;
+    font-size: 16px;
+    padding: 10px 0;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+}
+
+.container .input-wrapper label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    pointer-events: none;
+    font-size: 16px;
+    transition: .3s;
+}
+
+.container .input-wrapper input:focus ~ label,
+.container .input-wrapper input:valid ~ label {
+    top: -21px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+}
+
+.button-wrapper {
+    padding-top: 30px;
+}
+
+.button-wrapper > a {
+    background: transparent;
+    padding: 16px 24px;
+    color: #03e9f4;
+    box-shadow: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.button-wrapper > a:hover {
+    background: #03e9f4;
+    color: #fff;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.button-wrapper span {
+    position: absolute;
+    display: block;
+    background: #03e9f4;
+}
+
+.button-wrapper span:first-child {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }   
+
+    50%, 100% {
+        left: 100%;
+    }
+}
+
+.button-wrapper span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s ;
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }   
+
+    50%, 100% {
+        top: 100%;
+    }
+}
+
+.button-wrapper span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s ;
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }   
+
+    50%, 100% {
+        right: 100%;
+    }
+}
+
+.button-wrapper span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s ;
+}
+
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }   
+
+    50%, 100% {
+        bottom: 100%;
+    }
+}
